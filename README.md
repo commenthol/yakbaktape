@@ -42,7 +42,7 @@ statusCode: 200
 
 ## License
 
-UNLICENSE https://unlicense.org
+Unlicense https://unlicense.org
 
 ## References
 
