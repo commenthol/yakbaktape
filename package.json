@@ -1,0 +1,30 @@
+{
+  "name": "yakbaktape",
+  "version": "1.0.0-0",
+  "description": "Read yakbak tape files",
+  "keywords": [
+    "read",
+    "tapes",
+    "yakbak"
+  ],
+  "license": "Unlicense",
+  "author": "commenthol <commenthol@gmail.com>",
+  "main": "index.js",
+  "bin": {
+    "yakbaktape": "./bin/yakbaktape.js"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^5.1.1",
+    "yakbak": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=8"
+  }
+}
