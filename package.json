@@ -7,6 +7,10 @@
     "tapes",
     "yakbak"
   ],
+  "homepage": "https://github.com/commenthol/yakbaktape#readme",
+  "bugs": {
+    "url": "https://github.com/commenthol/yakbaktape/issues"
+  },
   "license": "Unlicense",
   "author": "commenthol <commenthol@gmail.com>",
   "main": "index.js",
@@ -15,6 +19,10 @@
   },
   "directories": {
     "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/commenthol/yakbaktape.git"
   },
   "scripts": {
     "test": "mocha"
