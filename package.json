@@ -25,10 +25,18 @@
     "url": "git+https://github.com/commenthol/yakbaktape.git"
   },
   "scripts": {
+    "lint": "eslint '**/*.js'",
     "test": "mocha"
   },
-  "dependencies": {},
+  "dependencies": {
+    "mock-http": "0.0.10"
+  },
   "devDependencies": {
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.1.0",
     "mocha": "^5.1.1",
     "yakbak": "^3.0.0"
   },

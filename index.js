@@ -1,35 +1,16 @@
 const {resolve} = require('path')
-
-class Response {
-  constructor () {
-    this._headers = {}
-    this._buffer = Buffer.from('')
-  }
-  set statusCode (statusCode) {
-    this._statusCode = statusCode
-  }
-  setHeader (key, value) {
-    this._headers[key] = value
-  }
-  write (buffer) {
-    this._buffer = Buffer.concat([this._buffer, buffer])
-  }
-  end (buffer) {
-    buffer && this.write(buffer)
-    this.out = {
-      statusCode: this._statusCode,
-      headers: this._headers,
-      body: this._buffer.toString()
-    }
-  }
-}
+const {Response} = require('mock-http')
 
 function readTape (filename) {
   const _filename = resolve(process.cwd(), filename)
   const res = new Response()
   require(_filename)({}, res)
-  res.out = Object.assign({filename}, res.out)
-  return res.out
+  return {
+    filename,
+    statusCode: res.statusCode,
+    headers: res._headers,
+    body: res._internal.buffer.toString()
+  }
 }
 
 function log (obj, filename) {
@@ -50,7 +31,6 @@ function log (obj, filename) {
 }
 
 module.exports = {
-  Response,
   readTape,
   log
 }
